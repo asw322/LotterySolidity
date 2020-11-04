@@ -40,15 +40,24 @@ mapping (address => uint26) public winnings;
     
     randomNum = uint(block.blockhash(block.number - 1)) % ticketCount;
     latestWinner = tickets[randomNum];
-    uint amtLot = ticketCount * ticketPrice;
+    
+    winnings[latestWinner] += ticketCount;
+    
     
     // uint index = random() % players.length;
     // players[index].transfer(this.balance);
-    players[index].transfer(amtLot);
 
     // reset the players array and (0) is initial size
     players = new address[](0);
     ticketCount = 0
+ }
+
+ function Withdraw() public {
+     require(winnings[msg.sender] > 0);
+
+    uint256 amountWon = winnings[msg.sender] * ticketPrice;
+    winnings[msg.sender] = 0;
+    msg.sender.transfer(amountWon);
  }
  
  // validation logic

@@ -1,0 +1,324 @@
+{
+    "contractName": "Lottery",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "chairperson",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "voters",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "weight",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "bool",
+                    "name": "voted",
+                    "type": "bool"
+                },
+                {
+                    "internalType": "address",
+                    "name": "delegate",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "vote",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"chairperson\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"voters\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"weight\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"voted\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"delegate\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"vote\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/alan/Desktop/Lehigh Class/Fall 2020/CSE 297/HW 7/Lottery.sol\":\"Lottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/alan/Desktop/Lehigh Class/Fall 2020/CSE 297/HW 7/Lottery.sol\":{\"keccak256\":\"0xf8697a1d5baf407f353db307b65a9c0a394d58f28c512c3c270fd987412ecd57\",\"urls\":[\"bzz-raw://70b99d15cd50d1ecfcfcd5a9fdf5cd118000b75a8f2f67d8f5f57201ee61393c\",\"dweb:/ipfs/QmYSnX6i2oNRr7Fmieg71BBXKw7aayZ36xr45GxXbWKLgm\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b50610123806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80632e4176cf146037578063a3ec138d146059575b600080fd5b603d60aa565b604080516001600160a01b039092168252519081900360200190f35b607c60048036036020811015606d57600080fd5b50356001600160a01b031660b9565b6040805194855292151560208501526001600160a01b03909116838301526060830152519081900360800190f35b6000546001600160a01b031681565b600160208190526000918252604090912080549181015460029091015460ff82169161010090046001600160a01b0316908456fea26469706673582212204b6015edfe52c1e069ce28e35b05283d826fce938daf11a1d9f603ab140cb75864736f6c63430007000033",
+    "deployedBytecode": "6080604052348015600f57600080fd5b506004361060325760003560e01c80632e4176cf146037578063a3ec138d146059575b600080fd5b603d60aa565b604080516001600160a01b039092168252519081900360200190f35b607c60048036036020811015606d57600080fd5b50356001600160a01b031660b9565b6040805194855292151560208501526001600160a01b03909116838301526060830152519081900360800190f35b6000546001600160a01b031681565b600160208190526000918252604090912080549181015460029091015460ff82169161010090046001600160a01b0316908456fea26469706673582212204b6015edfe52c1e069ce28e35b05283d826fce938daf11a1d9f603ab140cb75864736f6c63430007000033",
+    "sourceMap": "25:221:1:-:0;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "25:221:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;164:26;;;:::i;:::-;;;;-1:-1:-1;;;;;164:26:1;;;;;;;;;;;;;;197:39;;;;;;;;;;;;;;;;-1:-1:-1;197:39:1;-1:-1:-1;;;;;197:39:1;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;197:39:1;;;;;;;;;;;;;;;;;;;;164:26;;;-1:-1:-1;;;;;164:26:1;;:::o;197:39::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;197:39:1;;;:::o",
+    "sourcePath": "/Users/alan/Desktop/Lehigh Class/Fall 2020/CSE 297/HW 7/Lottery.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.7.0+commit.9e61f92b"
+    },
+    "ast": {
+        "absolutePath": "/Users/alan/Desktop/Lehigh Class/Fall 2020/CSE 297/HW 7/Lottery.sol",
+        "exportedSymbols": {
+            "Lottery": [
+                329
+            ]
+        },
+        "id": 330,
+        "license": null,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 313,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.7",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:1"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": null,
+                "fullyImplemented": true,
+                "id": 329,
+                "linearizedBaseContracts": [
+                    329
+                ],
+                "name": "Lottery",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "Lottery.Voter",
+                        "id": 322,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 315,
+                                "mutability": "mutable",
+                                "name": "weight",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 322,
+                                "src": "71:11:1",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 314,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "71:4:1",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 317,
+                                "mutability": "mutable",
+                                "name": "voted",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 322,
+                                "src": "92:10:1",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                },
+                                "typeName": {
+                                    "id": 316,
+                                    "name": "bool",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "92:4:1",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 319,
+                                "mutability": "mutable",
+                                "name": "delegate",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 322,
+                                "src": "112:16:1",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                },
+                                "typeName": {
+                                    "id": 318,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "112:7:1",
+                                    "stateMutability": "nonpayable",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 321,
+                                "mutability": "mutable",
+                                "name": "vote",
+                                "nodeType": "VariableDeclaration",
+                                "overrides": null,
+                                "scope": 322,
+                                "src": "138:9:1",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 320,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "138:4:1",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "value": null,
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Voter",
+                        "nodeType": "StructDefinition",
+                        "scope": 329,
+                        "src": "48:106:1",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "2e4176cf",
+                        "id": 324,
+                        "mutability": "mutable",
+                        "name": "chairperson",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 329,
+                        "src": "164:26:1",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                        },
+                        "typeName": {
+                            "id": 323,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "164:7:1",
+                            "stateMutability": "nonpayable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "a3ec138d",
+                        "id": 328,
+                        "mutability": "mutable",
+                        "name": "voters",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 329,
+                        "src": "197:39:1",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Voter_$322_storage_$",
+                            "typeString": "mapping(address => struct Lottery.Voter)"
+                        },
+                        "typeName": {
+                            "id": 327,
+                            "keyType": {
+                                "id": 325,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "205:7:1",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "197:25:1",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Voter_$322_storage_$",
+                                "typeString": "mapping(address => struct Lottery.Voter)"
+                            },
+                            "valueType": {
+                                "contractScope": null,
+                                "id": 326,
+                                "name": "Voter",
+                                "nodeType": "UserDefinedTypeName",
+                                "referencedDeclaration": 322,
+                                "src": "216:5:1",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Voter_$322_storage_ptr",
+                                    "typeString": "struct Lottery.Voter"
+                                }
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 330,
+                "src": "25:221:1"
+            }
+        ],
+        "src": "0:246:1"
+    },
+    "functionHashes": {
+        "chairperson()": "2e4176cf",
+        "voters(address)": "a3ec138d"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "58200",
+            "executionCost": "111",
+            "totalCost": "58311"
+        },
+        "external": {
+            "chairperson()": "1015",
+            "voters(address)": "2879"
+        }
+    }
+}

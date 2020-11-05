@@ -5,11 +5,11 @@ contract Lottery {
  address[] public players;
 
 //  functions for ticketing system
-mapping (address => uint26) public winnings; 
+mapping (address => uint256) public winnings; 
 
  address[] public tickets;
  uint public ticketCount = 0;
- uint public ticketPrice = 0.1; 
+ uint public ticketPrice = 0.1 ether;
  uint256 public randomNum = 0;
  address public latestWinner; 
  
@@ -21,9 +21,9 @@ mapping (address => uint26) public winnings;
 
  // sending Eth to enter loggery: payable function type
  function enter() public payable{
-    require(msg.value >= ticketPrice ether); // some requirements satisfied, then go through next
+    require(msg.value >= ticketPrice); // some requirements satisfied, then go through next
     players.push(msg.sender);
-    for (int i = 0; i < ticketCount; i++){
+    for (uint i = 0; i < ticketCount; i++){
         tickets.push(msg.sender);
     }
     ticketCount += msg.value / ticketPrice;
@@ -49,7 +49,7 @@ mapping (address => uint26) public winnings;
 
     // reset the players array and (0) is initial size
     players = new address[](0);
-    ticketCount = 0
+    ticketCount = 0;
  }
 
  function Withdraw() public {

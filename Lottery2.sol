@@ -43,10 +43,6 @@ mapping (address => uint256) public winnings;
     
     winnings[latestWinner] += ticketCount;
     
-    
-    // uint index = random() % players.length;
-    // players[index].transfer(this.balance);
-
     // reset the players array and (0) is initial size
     players = new address[](0);
     ticketCount = 0;
@@ -58,12 +54,6 @@ mapping (address => uint256) public winnings;
     uint256 amountWon = winnings[msg.sender] * ticketPrice;
     winnings[msg.sender] = 0;
     msg.sender.transfer(amountWon);
- }
- 
- // validation logic
- modifier restricted() {
-    require(msg.sender == manager); // only manager can access
-    _; // run all the rest of the code inside that function
  }
  
  function getPlayers() public view returns (address[]) {
